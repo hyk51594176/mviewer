@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "release": "npm run build && npm publish"
+    "release": "npm run build && npm publish --access public"
   },
   "author": "51594176@qq.com",
   "license": "MIT",
@@ -39,5 +39,8 @@
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-plugin-vue": "^4.3.1",
     "vue-template-compiler": "^2.5.16"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
