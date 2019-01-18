@@ -2,7 +2,7 @@
 > 基于 [viewerjs](https://github.com/fengyuanchen/viewerjs) 封装的vue 图片预览指令
 
 #### 用法
- npm install @weier/mviewer 
+ npm install @hanyk/mviewer 
 
 ```js
 import Vue from 'vue'

@@ -1,6 +1,6 @@
 {
-  "name": "@weier/mviewer",
-  "version": "0.0.3",
+  "name": "@hanyk/mviewer",
+  "version": "0.0.1",
   "description": "vue图片预览指令",
   "main": "dist/index.js",
   "scripts": {
