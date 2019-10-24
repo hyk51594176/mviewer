@@ -1,16 +1,17 @@
- 
-> 基于 [viewerjs](https://github.com/fengyuanchen/viewerjs) 封装的vue 图片预览指令
+# mviewer
 
-#### 用法
- npm install @hanyk/mviewer 
+基于 [viewerjs](https://github.com/fengyuanchen/viewerjs) 封装的vue 图片预览指令
+
+## 用法
+
+ > npm install @hanyk/mviewer
 
 ```js
 import Vue from 'vue'
-
 import mviewer from '@hanyk/mviewer'
-
 Vue.use(mviewer)
 ```
+
 ```html
 <template>
 <div v-viewer >
@@ -27,15 +28,17 @@ or
   </div>
 </div>
 ```
-```js 
+
+```js
  data(){
    options:{
      zIndex: 100000000
    }
  }
 ```
+
 >当前viewer实例  可用 this.$refs.viewer.viewer 来获取
- 
 
 ## Options
+
 >参考 [viewerjs](https://github.com/fengyuanchen/viewerjs#options)
