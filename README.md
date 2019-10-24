@@ -7,7 +7,7 @@
 ```js
 import Vue from 'vue'
 
-import mviewer from 'mviewer'
+import mviewer from '@hanyk/mviewer'
 
 Vue.use(mviewer)
 ```

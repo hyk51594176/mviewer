@@ -1,16 +1,16 @@
-import Viewer from 'viewerjs';
-import 'viewerjs/dist/viewer.css';
+import Viewer from 'viewerjs'
+import 'viewerjs/dist/viewer.css'
 
-function createView(el, binding) {
+function createView (el, binding) {
   if (el.viewer) {
     el.viewer.destroy()
   }
   el.viewer = new Viewer(el, {
     zIndex: 100000000,
-    ...binding.value,
+    ...binding.value
   })
 }
-function isIdentical(el) {
+function isIdentical (el) {
   const imgarr = el.viewer.images || []
   el.viewer.update()
   const imgarr2 = el.viewer.images || []
@@ -20,23 +20,22 @@ function isIdentical(el) {
 }
 export default {
   Viewer,
-  install(Vue) {
+  install (Vue) {
     Vue.directive('viewer', {
-      inserted(el, binding) {
+      inserted (el, binding) {
         createView(el, binding)
       },
-      componentUpdated(el, binding) {
+      componentUpdated (el, binding) {
         setTimeout(() => {
           if (!el.viewer || isIdentical(el)) return
           createView(el, binding)
-        }, 0);
+        }, 0)
       },
-      unbind(el) {
+      unbind (el) {
         if (el.viewer) {
           el.viewer.destroy()
         }
-      },
+      }
     })
-  },
+  }
 }
-
